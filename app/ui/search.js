@@ -37,6 +37,8 @@ export default function Search({ placeholder }) {
           Search
         </button>
       </div>
+      <br />
+      <br />
       <div>
         {team}
         {/* {team?.map((item, index) => (
