@@ -15,8 +15,9 @@ const client = new BedrockRuntimeClient({
 
 export default async function handler(req, res) {
   (async () => {
-    console.log("req", req);
-    const result = await getAiResponse(req.query.pokemon);
+    const result = await getAiResponse(
+      `Can you tell me about ${req.query.pokemon}`
+    );
     res.status(200).json({ pokemon: result });
   })().catch((error) => {
     console.error(error);
